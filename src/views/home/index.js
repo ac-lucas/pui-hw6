@@ -83,10 +83,7 @@ class Homepage extends Component {
                 }
             ],
 
-            cartAddedData: [
-
-            ],
-
+            cartAddedData: localStorage.getItem("cartAddedData") ? JSON.parse(localStorage.getItem("cartAddedData")) : [],
             totalPrice: 0,
             totalItems: 0,
             tempTitle: "",
@@ -101,6 +98,18 @@ class Homepage extends Component {
             idxToAdd: 0
         }
         this.sort = this.handleSortChange.bind(this)
+    }
+
+    componentDidMount() {
+        // called when the component is first mounted
+        localStorage.setItem("cartAddedData", JSON.stringify(this.state.cartAddedData));
+        console.log(localStorage);
+    }
+
+    componentDidUpdate() {
+        // called when there are updates in the component e.g., state changes
+        localStorage.setItem("cartAddedData", JSON.stringify(this.state.cartAddedData));
+        console.log(localStorage);
     }
 
     pluralize() {
@@ -237,7 +246,7 @@ class Homepage extends Component {
                 </div>
 
                 <div className="search-sort">
-                    <form action="/pui-hw5/" method="get">
+                    <form action="/pui-hw6/" method="get">
                         <input
                             type="text"
                             id="header-search"
