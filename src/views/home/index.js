@@ -191,10 +191,11 @@ class Homepage extends Component {
     removeHandler = (idxToRemove, price, items) => {
         const newCardData = this.state.cartAddedData;
         newCardData.splice(idxToRemove, 1);
+        const newPrice = +this.state.totalPrice - +price;
         this.setState(prevState => ({
             ...prevState,
             cartAddedData: newCardData,
-            totalPrice: +this.state.totalPrice - +price,
+            totalPrice: newPrice.toFixed(2),
             totalItems: +this.state.totalItems - +1
         }))
     }
