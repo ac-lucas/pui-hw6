@@ -84,8 +84,8 @@ class Homepage extends Component {
             ],
 
             cartAddedData: localStorage.getItem("cartAddedData") ? JSON.parse(localStorage.getItem("cartAddedData")) : [],
-            totalPrice: 0,
-            totalItems: 0,
+            totalPrice: localStorage.getItem("totalPrice") ? JSON.parse(localStorage.getItem("totalPrice")) : 0,
+            totalItems: localStorage.getItem("totalItems") ? JSON.parse(localStorage.getItem("totalItems")) : 0,
             tempTitle: "",
             tempGlazing: "Keep original",
             tempPack: "1",
@@ -103,17 +103,21 @@ class Homepage extends Component {
     componentDidMount() {
         // called when the component is first mounted
         localStorage.setItem("cartAddedData", JSON.stringify(this.state.cartAddedData));
+        localStorage.setItem("totalPrice", JSON.stringify(this.state.totalPrice));
+        localStorage.setItem("totalItems", JSON.stringify(this.state.totalItems));
         console.log(localStorage);
     }
 
     componentDidUpdate() {
         // called when there are updates in the component e.g., state changes
         localStorage.setItem("cartAddedData", JSON.stringify(this.state.cartAddedData));
+        localStorage.setItem("totalPrice", JSON.stringify(this.state.totalPrice));
+        localStorage.setItem("totalItems", JSON.stringify(this.state.totalItems));
         console.log(localStorage);
     }
 
     pluralize() {
-        if (this.state.totalItems != 1) {
+        if (this.state.totalItems !== 1) {
             return "items"
         }
         else {
