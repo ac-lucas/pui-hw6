@@ -105,7 +105,6 @@ class Homepage extends Component {
         localStorage.setItem("cartAddedData", JSON.stringify(this.state.cartAddedData));
         localStorage.setItem("totalPrice", JSON.stringify(this.state.totalPrice));
         localStorage.setItem("totalItems", JSON.stringify(this.state.totalItems));
-        console.log(localStorage);
     }
 
     componentDidUpdate() {
@@ -113,7 +112,6 @@ class Homepage extends Component {
         localStorage.setItem("cartAddedData", JSON.stringify(this.state.cartAddedData));
         localStorage.setItem("totalPrice", JSON.stringify(this.state.totalPrice));
         localStorage.setItem("totalItems", JSON.stringify(this.state.totalItems));
-        console.log(localStorage);
     }
 
     pluralize() {
