@@ -1,0 +1,253 @@
+html,
+body,
+h1,
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  height: 100%;
+}
+
+p,
+label {
+  font-size: 20px;
+}
+
+/* navigation */
+
+.navbar {
+  display: flex;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+
+.navbar-left {
+  width: 400px;
+  flex: 0 1 auto;
+  margin: 0px 30px 0px 30px;
+}
+
+.nabar-right {
+  flex: 0 1 auto;
+}
+
+.navbar-links {
+  margin-top: 30px;
+  margin-left: 325px;
+  cursor: pointer;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+}
+
+
+#selected-link {
+  background: yellow;
+  font-weight: bold;
+  margin-right: 70px;
+}
+
+.navbar-divider {
+  border: 2px solid black;
+  margin-top: 40px;
+  margin-right: -7px;
+}
+
+.navbar-title {
+  margin-top: 70px;
+  margin-right: 250px
+}
+
+.cart-popup {
+  background-color: white;
+  border: 1px solid black;
+  right: 0;
+  position: absolute;
+  margin-right: 85px;
+  margin-top: -60px;
+  z-index: 9;
+}
+
+.popup p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* main content */
+
+.search-sort {
+  white-space: nowrap;
+  margin-left: 70px;
+}
+
+.search-sort input {
+  width: 300px;
+}
+
+form,
+.sort>p {
+  display: inline-block;
+}
+
+.sort {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.divider {
+  border: 2px solid #362e24;
+}
+
+.cart-info {
+  white-space: nowrap;
+}
+
+.shopping-cart {
+  margin-left: 70px;
+  display: inline-block;
+}
+
+.total {
+  float: right;
+  margin-right: 100px;
+}
+
+.empty {
+  margin-left: 70px;
+}
+
+.cart-items {
+  margin-left: 70px;
+  text-align: center;
+  overflow: wrap;
+}
+
+.cart-image {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+}
+
+.remove {
+  text-decoration: underline;
+  cursor: pointer;
+
+}
+
+.card {
+  display: flex;
+}
+
+.row {
+  display: flex;
+  margin-left: 70px;
+  flex-wrap: wrap;
+  flex: 0 0 20%;
+}
+
+.column {
+  width: 300px;
+  margin: 20px 70px 10px 0px;
+}
+
+/* card style */
+
+.card-image {
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+}
+
+.card-price-right>button {
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid black;
+  font-size: 20px;
+  float: right;
+}
+
+label {
+  margin-right: 36px;
+}
+
+.card-glazing>select {
+  padding: 7px 10px 7px 1px;
+  font-size: 20px;
+  border: 2px solid black;
+}
+
+/* pack size */
+
+.card-size {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-size-title {
+  flex-shrink: 0;
+  margin-right: 25px;
+}
+
+.card-size-squares {
+  display: flex;
+}
+
+.selected {
+  background-color: #c7c7c7;
+}
+
+/* referenced from https://codepen.io/w3programmings/pen/zzRKpy */
+.boxed {
+  display: flex;
+  justify-content: space-between;
+}
+
+.boxed label {
+  padding: 5px 11px 5px 11px;
+  font-size: 17px;
+  border: solid 2px black;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+
+.boxed input[type="radio"] {
+  display: none;
+}
+
+
+
+/* price */
+
+.card-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+}
+
+.card-price-left {
+  margin-right: 36px;
+}
+
+.card-price-left p {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.card-price-right {
+  flex-grow: 2;
+}
+
+.card-price button {
+  padding: 7px 20px 7px 20px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.card-price button:hover {
+  background-color: yellow;
+}
